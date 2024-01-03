@@ -43,6 +43,9 @@ console.log(quiz[indexArray]);
 
 document.getElementById("start-quiz").addEventListener("click", function(){
     
+    document.getElementById("db-quiz").classList.add("hidden")
+    document.getElementById("questions").classList.remove("hidden")
+
     console.log("Hello");
 })
 
