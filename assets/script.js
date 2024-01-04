@@ -74,7 +74,6 @@ function quizTimer() {
         
 
 }, 1000)
-    
 }
 
 
