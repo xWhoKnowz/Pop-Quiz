@@ -66,14 +66,12 @@ function quizTimer() {
         timerQuant--;
         timer.textContent = timerQuant + " seconds left.";
 
-        if (timerQuant===0) {
+        if (timerQuant === 0) {
             clearInterval(scoreInterval)
-
         }
 
-        
-
-}, 1000)
+    }, 1000)
+    return scoreInterval;
 }
 
 
@@ -119,19 +117,26 @@ function questions() {
     document.querySelector(".choices").addEventListener("click", function (event) {
         if (event.target.matches("button")) {
             console.log(event.target.textContent);
-            
+
             indexArray++
             questions()
-            
-            // Todo Check right vs wrong answers
-            console.log(quiz[indexArray]);
-            console.log(quiz[indexArray].correctAnswer);
-        } else {
-            
+        } if (event.target.textContent !== quiz[indexArray].correctAnswer.textContent) {
+            timerQuant -= 10
+            timer.textContent = timerQuant + " seconds left.";
+        } if(quiz[indexArray]>4) {
+            clearInterval(scoreInterval)
         }
-        // ! if (event.target.textContext === !(quiz[indexArray].correctAnswer)) { };
+
+        // Todo Check right vs wrong answers
+        console.log(quiz[indexArray]);
+        console.log(quiz[indexArray].correctAnswer);
+
+
+        // else {
+        //     document.getElementById("questions").innerHTML = ("")
+
+        // }
     })
-    // todo add timer logic
 
 
     // todo add logic for score/initial to be stored to local storage

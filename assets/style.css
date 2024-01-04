@@ -3,15 +3,35 @@ p {
     margin-right: 20%;
 }
 
-#db-quiz {
+button {
+    color: yellow;
+    background-color: mediumseagreen;
+    border: solid mediumseagreen;
+    border-radius: 5px;
+}
+
+#score-keeper {
+    color: yellow;
+    background-color: orangered;
+    border: solid mediumseagreen;
+    border-radius: 5px;
+}
+
+#db-quiz, #questions {
     font-weight: bolder;
     text-align: center;
     justify-content: center;
+    color: yellow;
+    background-color: orangered;
+    border: solid mediumseagreen;
+    border-radius: 25px;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 #start-quiz {
     position: absolute;
-    right: 48%;
+    right: 47%;
 }
 
 
