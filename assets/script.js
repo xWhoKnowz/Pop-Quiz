@@ -66,12 +66,11 @@ function quizTimer() {
         timerQuant--;
         timer.textContent = timerQuant + " seconds left.";
 
-        if (timerQuant === 0) {
+        if (timerQuant === 0 || indexArray >= 5) {
             clearInterval(scoreInterval)
         }
 
     }, 1000)
-    return scoreInterval;
 }
 
 
@@ -123,8 +122,6 @@ function questions() {
         } if (event.target.textContent !== quiz[indexArray].correctAnswer.textContent) {
             timerQuant -= 10
             timer.textContent = timerQuant + " seconds left.";
-        } if(quiz[indexArray]>4) {
-            clearInterval(scoreInterval)
         }
 
         // Todo Check right vs wrong answers
